@@ -1,16 +1,17 @@
+doctype html
 html
-  head(lang='en')
-    meta(charset='utf-8')
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible" content="ie=edge")
-    title #{title} - #{config.appName}
-
-    include stylesheets    
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= appName
   body
-    include navbar
-    
+    header
+      h1= appName
+      // Add language switcher dropdown menu
+      form#lang-switcher(action='/change-language', method='get')
+        select(name='lng', onchange='this.form.submit()')
+          option(value='en', selected=lng === 'en') English
+          option(value='ru', selected=lng === 'ru') Русский
     block content
-
-    include footer
-
-    include scripts
+    footer
+      p &copy; 2026 #{appName}

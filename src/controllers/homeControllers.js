@@ -1,16 +1,16 @@
-'use strict';
-const config = require("../config");
-const asyncHandler = require("express-async-handler");
+"use strict";
+const config = require("../config/index");
+const getHomePage = (req, res) => {
+  const userName = req.query.name || 'Guest';  // Get the user's name from query parameters, default to 'Guest'
+  const cartItemCount = parseInt(req.query.items, 10) || 0;  // Get item count from query parameters, default to 0
 
-const home = asyncHandler(async (req, res) => {
-  return res.render('home', {
-    title: "Home",
-    flashSuccess: "Some success.",
-    flashError: "Some error.",
-    config: {
-      appName: config.appName,
-    },
+  res.render('index', { 
+    title: req.t('title'),
+    welcomeMessage: req.t('welcome_user', { name: userName }),  // Interpolate user's name
+    cartMessage: req.t('cart_items', { count: cartItemCount }),  // Display singular/plural based on count
+    otherMessage: req.t('card.message', { ns: "business" }),
+    appName: config.appName,
   });
-});
+};
 
-module.exports = { home, };
+module.exports = { getHomePage };
