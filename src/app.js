@@ -24,6 +24,7 @@ i18next
     ns: [
       "translation",
       "business",
+      "API/home",
     ],
     defaultNs: "translation",
     backend: {
