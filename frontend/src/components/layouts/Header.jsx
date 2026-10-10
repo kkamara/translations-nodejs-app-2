@@ -1,10 +1,13 @@
 import React from "react"
 import { useSelector, } from "react-redux"
 import { Link, } from "react-router-dom"
+import { useTranslation, } from "react-i18next"
 
+import LanguageSwitcher from "./LanguageSwitcher"
 import "./Header.scss"
 
 export default function Header(props) {
+  const { t, } = useTranslation()
   return <nav className="navbar navbar-expand-lg mb-4 bg-primary header-container" data-bs-theme="dark">
     <div className="container">
       <Link className="navbar-brand" to="/">
@@ -16,9 +19,12 @@ export default function Header(props) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+            <Link className="nav-link active" aria-current="page" to="/">
+              {t("nav.home")}
+            </Link>
           </li>
         </ul>
+        <LanguageSwitcher />
       </div>
     </div>
   </nav>

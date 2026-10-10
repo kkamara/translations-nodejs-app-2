@@ -1,0 +1,9 @@
+{
+  "nav": { "home": "Home", "language": "Language" },
+  "home": {
+    "pageTitle": "Home",
+    "loading": "Loading...",
+    "error": "Unable to load content. Please try again later.",
+    "retry": "Retry"
+  }
+}

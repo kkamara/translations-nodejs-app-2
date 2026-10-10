@@ -1,7 +1,14 @@
 import axios from "axios"
 
+import i18n from "../i18n"
+
 axios.defaults.withCredentials = true
 axios.defaults.withXSRFToken = false
+
+axios.interceptors.request.use(config => {
+  config.headers["Accept-Language"] = (i18n.resolvedLanguage || "en").slice(0, 2)
+  return config
+})
 
 export default class HttpService
 {

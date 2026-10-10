@@ -35,13 +35,15 @@ i18next
       caches: ['cookie'],               // Cache detected language in cookies
     },
     fallbackLng: 'en',                   // Default language when no language is detected
+    supportedLngs: ['en', 'ru'],
+    nonExplicitSupportedLngs: true,      // en-US -> en, ru-RU -> ru
+    load: 'languageOnly',
     preload: ['en', 'ru'],               // Preload these languages at startup
   });
 
 const app = express();
 
 app.use(middleware.handle(i18next));
-app.use(setLanguage);
 
 // For request logs when deployed on remote servers.
 // If we don't do this, the logs show the remote address as "127.0.0.1".
