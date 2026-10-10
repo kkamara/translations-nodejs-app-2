@@ -1,0 +1,5 @@
+{
+  "title": "Homepage",
+  "welcome_user": "Welcome, {{name}}!",
+  "cart_items": "You have {{count}} item(s) in your cart."
+}

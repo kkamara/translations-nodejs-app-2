@@ -1,5 +1,6 @@
 "use strict";
 const config = require("../config/index");
+
 const getHomePage = (req, res) => {
   const userName = req.query.name || 'Guest';  // Get the user's name from query parameters, default to 'Guest'
   const cartItemCount = parseInt(req.query.items, 10) || 0;  // Get item count from query parameters, default to 0
