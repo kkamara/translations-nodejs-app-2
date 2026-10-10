@@ -2,9 +2,9 @@
 
 ![nodejs-react-boilerplate2.png](https://raw.githubusercontent.com/kkamara/useful/refs/heads/main/nodejs-react-boilerplate2.png)
 
-# nodejs-react-boilerplate [![Tests Pipeline](https://github.com/kkamara/nodejs-react-boilerplate/actions/workflows/node.js.yml/badge.svg)](https://github.com/kkamara/nodejs-react-boilerplate/actions/workflows/node.js.yml)
+# translations-nodejs-app-2 [![Tests Pipeline](https://github.com/kkamara/translations-nodejs-app-2/actions/workflows/node.js.yml/badge.svg)](https://github.com/kkamara/translations-nodejs-app-2/actions/workflows/node.js.yml)
 
-(22-Jun-2021) An MVC NodeJS boilerplate with React 19 Redux SPA.
+(10-Oct-2026) A NodeJS translations app with a React app and static pages. Using the i18next package.
 
 * [Using Postman?](#postman)
 
@@ -29,9 +29,9 @@
 
 [Get Postman HTTP client](https://www.postman.com).
 
-[Postman API Collection for NodeJS React Boilerplate](./nodejs-react-boilerplate.postman_collection.json).
+[Postman API Collection for Translations NodeJS App 2](./translations-nodejs-app-2.postman_collection.json).
 
-[Postman API Environment for NodeJS React Boilerplate](./nodejs-react-boilerplate.postman_environment.json).
+[Postman API Environment for Translations NodeJS App 2](./translations-nodejs-app-2.postman_environment.json).
 
 ## Important Note
 
@@ -134,7 +134,7 @@ docker-compose up --build -d
 
 ![docker-mailhog.png](https://raw.githubusercontent.com/kkamara/useful/main/docker-mailhog.png)
 
-Mail environment credentials are at [.env.docker](https://raw.githubusercontent.com/kkamara/nodejs-react-boilerplate/main/.env.docker).
+Mail environment credentials are at [.env.docker](./.env.docker).
 
 The [Mailhog](https://github.com/mailhog/MailHog) Docker image runs at `http://localhost:8025`in this app.
 

@@ -1,7 +1,6 @@
 {
-  "name": "nodejs-react-boilerplate",
+  "name": "translations-nodejs-app-2",
   "version": "0.1.0",
-  "description": "(22-Jun-2021) An MVC NodeJS boilerplate with React 19 Redux SPA.",
   "main": "src/app.js",
   "scripts": {
     "test": "mocha tests/**/{,**/}*.js",
